@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------
+# Variables, functions and mixins
+--------------------------------------------------------------*/
+@import "abstracts/variables",
+        "abstracts/functions",
+        "abstracts/mixins",
+        'abstracts/include-media';
+
+/*--------------------------------------------------------------
+1.0 Normalize
+	* normalize.css v7.0.0 | MIT License
+	* github.com/necolas/normalize.css
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "base/typography";
+
+/*--------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------*/
+@import "base/helpers";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "components/forms";
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+@import "components/buttons";
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+@import "layout/header";
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+@import "layout/hero";
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+@import "layout/features";
+
+/*--------------------------------------------------------------
+# Newsletter
+--------------------------------------------------------------*/
+@import "layout/newsletter";
+
+/*--------------------------------------------------------------
+# Site content
+--------------------------------------------------------------*/
+@import "layout/main";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "layout/footer";
+
+.feedbacker-logo {
+	max-height: 30px;
+
+	&.top {
+		opacity: 0.6;
+	}
+}
+
+.invert {
+	-webkit-filter: invert(1);
+}
+
+.container-relative {
+	position: relative;
+	img {
+		transition: all 0.3s ease-in;
+	}
+	img:first-of-type {
+		position: relative;
+		z-index: 2;
+		opacity: 1;
+		transform: translateY(-15px);
+		&:hover {
+			opacity: 0;
+			transform: translateY(15px);
+			transition: all 0.3s ease-in;
+			& + img:last-of-type {
+				opacity: 1;
+				transform: translateY(-15px);
+			}
+		}
+	}
+	img:last-of-type {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		z-index: 1;
+		transform: translateY(15px);
+	}
+}
+
+
+.pulsar {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	pointer-events: none;
+	top: 34.5%;
+	left: 50%;
+	z-index: 3;
+}
+.circle {
+	border-radius: 50%;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: rgba(#00bfc9, 0.8);
+	animation: pulse 2.2s infinite;
+}
+.circle--1 {
+	animation: none
+}
+.circle--2 {
+	animation-delay: 0.2s
+}
+.circle--3 {
+	animation-delay: 0.5s
+}
+.circle--4 {
+	animation-delay: 0.9s
+}
+@keyframes pulse {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	30% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(7);
+	}
+}
