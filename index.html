@@ -8,7 +8,8 @@
 	<link rel='shortcut icon' type='image/x-icon' href='src/favicon.ico'/>
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Roboto:500" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
+	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 	<!-- COMMON TAGS -->
 	<meta charset="utf-8">
 	<!-- Search Engine -->
@@ -145,6 +146,23 @@
                     </div>
                 </div>
             </section>
+
+	        <section class="features section text-center">
+		        <div class="container">
+			        <div class="features-inner section-inner has-bottom-divider">
+				        <div class="video-wrap">
+					        <div class="plyr__video-embed" id="player">
+						        <iframe
+							        src="https://www.youtube.com/embed/bkxmN-j-ae0?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+							        allowfullscreen
+							        allowtransparency
+							        allow="autoplay"
+						        ></iframe>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+	        </section>
 
             <section class="features section text-center">
                 <div class="container">
@@ -345,7 +363,12 @@
         </footer>
     </div>
 
-    <script src="dist/js/main.min.js"></script>
+	<script src="https://cdn.plyr.io/3.5.2/plyr.polyfilled.js"></script>
+	<script>
+		const player = new Plyr('#player');
+	</script>
+
+	<script src="dist/js/main.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136171272-1"></script>
