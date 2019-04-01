@@ -40,4 +40,53 @@ main {
 	overflow: hidden;
 	max-width: 600px;
 	margin: 0 auto;
+	box-shadow: 0 5px 25px rgba(94, 94, 94, 0.54);
+}
+
+.producthunt {
+	position: fixed;
+	width: 285px;
+	height: 180px;
+	background: white;
+	bottom: 10px;
+	left: 10px;
+	z-index:9000;
+	border: 1px solid #e3e3e3;
+	border-radius: 3px;
+
+	a {
+		text-decoration: none;
+	}
+}
+.cat img {
+	width: 100px;
+	margin: 6px auto;
+}
+.button-pro p {
+	margin: 0;
+	font-size: 12px;
+	padding: 0;
+	color: black;
+	text-align: center;
+}
+.product-link {
+	width: 40%;
+	color: #c95e3d;
+	font-family: sans-serif;
+	font-size: 13px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #c95e3d;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.producthunt-close {
+	margin: 0 -14px;
+	font-size: 15px;
+	font-family: sans-serif;
+	color: black;
+	text-align: right;
+	position: absolute;
+	width: 100%;
+	cursor: pointer;
 }
